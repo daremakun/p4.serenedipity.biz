@@ -1,0 +1,65 @@
+2013-12-20 18:32:28 - INFO --> -------------------------- 
+2013-12-20 18:32:28 - INFO --> Controller/Method: posts/following 
+2013-12-20 18:32:28 - INFO --> From: Serenedipity (dremak11@gmail.com) 
+2013-12-20 18:32:28 - INFO --> To: Serenedipity (dremak11@gmail.com),  
+2013-12-20 18:32:28 - INFO --> CC:  
+2013-12-20 18:32:28 - INFO --> BCC:  
+2013-12-20 18:32:28 - INFO --> Subject: Serenedipity SQL Error 
+2013-12-20 18:32:28 - INFO --> Body: <h2>SQL Error</h2> SELECT
+				
+				users.first_name,
+				users.last_name,
+				users.avatar
+				from user
+				INNER JOIN users_users ON user.user_id = users_users.user_id_followed
+				WHERE users_users.user_id = 6
+				ORDER BY created DESC Table 'serenedi_p4_serenedipity_biz.user' doesn't exist<h2>Qu 
+2013-12-20 18:32:42 - INFO --> -------------------------- 
+2013-12-20 18:32:42 - INFO --> Controller/Method: posts/following 
+2013-12-20 18:32:42 - INFO --> From: Serenedipity (dremak11@gmail.com) 
+2013-12-20 18:32:42 - INFO --> To: Serenedipity (dremak11@gmail.com),  
+2013-12-20 18:32:42 - INFO --> CC:  
+2013-12-20 18:32:42 - INFO --> BCC:  
+2013-12-20 18:32:42 - INFO --> Subject: Serenedipity SQL Error 
+2013-12-20 18:32:42 - INFO --> Body: <h2>SQL Error</h2> SELECT
+				
+				users.first_name,
+				users.last_name,
+				users.avatar
+				from users
+				INNER JOIN users_users ON user.user_id = users_users.user_id_followed
+				WHERE users_users.user_id = 6
+				ORDER BY created DESC Unknown column 'user.user_id' in 'on clause'<h2>Query Histor 
+2013-12-20 18:33:39 - INFO --> -------------------------- 
+2013-12-20 18:33:39 - INFO --> Controller/Method: posts/following 
+2013-12-20 18:33:39 - INFO --> From: Serenedipity (dremak11@gmail.com) 
+2013-12-20 18:33:39 - INFO --> To: Serenedipity (dremak11@gmail.com),  
+2013-12-20 18:33:39 - INFO --> CC:  
+2013-12-20 18:33:39 - INFO --> BCC:  
+2013-12-20 18:33:39 - INFO --> Subject: Serenedipity SQL Error 
+2013-12-20 18:33:39 - INFO --> Body: <h2>SQL Error</h2> SELECT
+				
+				users.first_name,
+				users.last_name,
+				users.avatar
+				from users
+				INNER JOIN users_users ON users.user_id = users_users.user_id_followed
+				WHERE users_users.user_id = 6
+				ORDER BY created DESC Column 'created' in order clause is ambiguous<h2>Query Hist 
+2013-12-20 18:35:14 - INFO --> -------------------------- 
+2013-12-20 18:35:14 - INFO --> Controller/Method: posts/following 
+2013-12-20 18:35:14 - INFO --> From: Serenedipity (dremak11@gmail.com) 
+2013-12-20 18:35:14 - INFO --> To: Serenedipity (dremak11@gmail.com),  
+2013-12-20 18:35:14 - INFO --> CC:  
+2013-12-20 18:35:14 - INFO --> BCC:  
+2013-12-20 18:35:14 - INFO --> Subject: Serenedipity SQL Error 
+2013-12-20 18:35:14 - INFO --> Body: <h2>SQL Error</h2> SELECT
+				
+				users.first_name,
+				users.last_name,
+				users.avatar
+				users.modified
+				from users
+				INNER JOIN users_users ON users.user_id = users_users.user_id_followed
+				WHERE users_users.user_id = 6 
+				ORDER BY users.created DESC You have an error in your SQL syn 

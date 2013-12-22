@@ -1,0 +1,14 @@
+2013-12-19 14:08:25 - INFO --> -------------------------- 
+2013-12-19 14:08:25 - INFO --> Controller/Method: users/p_login 
+2013-12-19 14:08:25 - INFO --> From: Serenedipity (dremak11@gmail.com) 
+2013-12-19 14:08:25 - INFO --> To: Serenedipity (dremak11@gmail.com),  
+2013-12-19 14:08:25 - INFO --> CC:  
+2013-12-19 14:08:25 - INFO --> BCC:  
+2013-12-19 14:08:25 - INFO --> Subject: Serenedipity SQL Error 
+2013-12-19 14:08:25 - INFO --> Body: <h2>SQL Error</h2> SELECT token
+				FROM users
+				WHERE email = "gbrooks@gmail.com"
+				AND password = "7154201baf6cab79e2957dc72e0154b8f339dc50" No database selected<h2>Query History</h2>0 = SELECT token
+				FROM users
+				WHERE email = "gbrooks@gmail.com"
+				AND password = "7154201baf6cab79e2957 
