@@ -229,8 +229,24 @@ img {
 		font-size: 26pt;
 }
 
-
-
+a:link {
+        color: #06F;
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+        color: #F00;
+        font-weight:bolder;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: #990;
+    }
+    a:active {
+        text-decoration: none;
+        color: #93F;
+        font-weight:bolder;
+	}
 #feedControl {
 		margin-top : 10px;
 		margin-left: auto;

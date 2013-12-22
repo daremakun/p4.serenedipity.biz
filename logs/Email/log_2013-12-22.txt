@@ -1,0 +1,10 @@
+2013-12-22 13:21:36 - INFO --> -------------------------- 
+2013-12-22 13:21:36 - INFO --> Controller/Method: users/p_upload_avatar 
+2013-12-22 13:21:36 - INFO --> From: Serenedipity (dremak11@gmail.com) 
+2013-12-22 13:21:36 - INFO --> To: Serenedipity (dremak11@gmail.com),  
+2013-12-22 13:21:36 - INFO --> CC:  
+2013-12-22 13:21:36 - INFO --> BCC:  
+2013-12-22 13:21:36 - INFO --> Subject: Serenedipity SQL Error 
+2013-12-22 13:21:36 - INFO --> Body: <h2>SQL Error</h2> UPDATE users SE WHERE  user_id = 8 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  user_id = 8' at line 1<h2>Query History</h2>0 = SELECT *
+					FROM users
+					WHERE token = 'd38054a4d58 

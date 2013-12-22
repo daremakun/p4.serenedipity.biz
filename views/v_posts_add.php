@@ -6,9 +6,12 @@ if(isset($title)) { echo $title; }
 ?>
 </h1>
 
+<div id="feedControl">Loading...</div>
+      <!-- Main component for a primary marketing message or call to action -->
+      <br/>
 <!-- Error handling if a user tried to submit an empty post -->
 	<?php if(isset($error)): ?>
-		<div class='error' align = "center">
+		<div class='error'>
 
 			Cannot submit empty post! Please try again.
 		<br><br>
@@ -26,14 +29,14 @@ User needs to be redirected to posts/p_edit/post_id instead -->
 	<?php endif; ?>
 
 <div class="row-fluid">
-	<div class = "span12" align = "center">
+	<div class = "span12">
 
 <!-- if the $post_id is set, then pre-populate text area with prior post -->
 		<textarea rows="10" cols="50" name="content" data-content="Please post any content related to the latest news." data-rel="popover" class="input-lg form-control" data-original-title="" title=""><?php if(isset($post_id)): ?><?=$post?><?php endif; ?></textarea>
 		
 		
 	</div>
-	<div class = "span12" align = "right">
+	<div class = "span12">
 		<button type='submit' class='btn btn-primary' value='Post'><i class = "icon-pencil"></i>
 		
 		<?php 

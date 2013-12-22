@@ -3,7 +3,7 @@
 
 <!--If member is not logged in he/she can see only the names/avatars of members but can't follow them.-->
 <?php if(!$user): ?>
-        <p><i><?= "If you want to see their posts of follow them, please <a href='/users/signup'>signup</a> or <a href='/users/login'>login</a>." ?></i></p>
+        <p><i><?= "If you want to see their posts or follow them, please <a href='/users/signup'>signup</a> or <a href='/users/login'>login</a>." ?></i></p>
 <?php endif; ?>
 
 <!--Members' list.-->

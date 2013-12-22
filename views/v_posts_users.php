@@ -1,10 +1,9 @@
 
 
-
 <?php foreach($users as $person):?>
 
     <!-- Display each users' photo, name, and date joined. And option to follow/unfollow -->
-	<div id = "users" class = "row-fluid">
+	<div class = "row-fluid">
 		<div class = "span1">
 			<img src = '/uploads/avatars/<?=$person['avatar'] ?>'>
 		</div>

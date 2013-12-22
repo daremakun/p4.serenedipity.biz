@@ -2,23 +2,7 @@
 	<html>
 		<head>
 
-<style>
-	body {
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
 
-	.navbar {
-		margin-bottom: 20px;
-	}
-	
-	.navbar-collapse collapse:hover {
-		background: none repeat scroll 0 0 #8B0000;
-		font-weight: bold;
-		color: #330000;
-}
-
-</style>
         	<title><?php
 	if (isset($title))
 		echo $title;
@@ -26,12 +10,10 @@
 
         	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
+
 			<!-- Common CSS/JSS -->
-			<!-- <link rel="stylesheet" href="/css/bootstrap.css" type="text/css"> -->
-			
+		
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-			<script type="text/javascript" 
-        	src="http://www.your-domain.com/easy-comment/jquery.easy-comment.min.js"></script>
 			
 			<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -53,7 +35,34 @@
 			<style type="text/css">
 				@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
 			</style>
-				
+			<style>
+	body {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.navbar {
+		margin-bottom: 20px;
+	}
+	a:link {
+        color: #06F;
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+        color: #F00;
+        font-weight:bolder;
+    }
+    a:hover {
+        text-decoration: none;
+        color: #990;
+    }
+    a:active {
+        text-decoration: none;
+        color: #93F;
+        font-weight:bolder;
+    }
+</style>	
 		</head>
 
 	<body>
@@ -71,21 +80,22 @@
           </button>
           <a class="navbar-brand" href="/">Serenedipity</a>
         </div>
+        
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 
                            <!-- Menu for users who are logged in -->
                         <?php if($user): ?>
-                        
-                                <li><a href='/posts/index'>All Posts</a></li>
-                                <li><a href='/posts/users'>View / Follow Members</a></li>
-                                <li><a href='/posts/following'>Currently following</a></li>         
-                                <li><a href='/posts/add'>Add posts</a> </li>                       
+
+                                <li class="<?php echo (isset($current) && $current == 'posts-index' ? 'active' : ''); ?>"><a href='/posts/index'>All Posts</a></li>
+                                <li class="<?php echo (isset($current) && $current == 'posts-users' ? 'active' : ''); ?>"><a href='/posts/users'>View / Follow Members</a></li>
+                                <li class="<?php echo (isset($current) && $current == 'posts-following' ? 'active' : ''); ?>"><a href='/posts/following'>Currently following</a></li>         
+                                <li class="<?php echo (isset($current) && $current == 'posts-add' ? 'active' : ''); ?>"><a href='/posts/add'>Add posts</a> </li>                       
                         
                         <!-- Menu options for users who are not logged in -->
                         <?php else: ?>
                         
-                                <li><a href='/users'>Members</a></li>
+                                <li class="<?php echo (isset($current) && $current == 'users' ? 'active' : ''); ?>"><a href='/users'>Members</a></li>
                         
                         <?php endif; ?>
                         
@@ -95,7 +105,7 @@
                         <!--If user logged in display menu-->
                         <?php if($user): ?>
                         
-                                <li> <a href='/users/profile'>My Profile</a></li>
+                                <li class="<?php echo (isset($current) && $current == 'users-profile' ? 'active' : ''); ?>"> <a href='/users/profile'>My Profile</a></li>
                                 <li> <a href='/users/logout'>Logout</a></li>
                               
                 
@@ -111,8 +121,7 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-
-      <!-- Main component for a primary marketing message or call to action -->
+		
       <div class="page-header">
         <h1>
         	<?php
@@ -132,12 +141,7 @@
     </div> <!-- /container -->
 	
          <script src="/js/main.js"></script>
-         				<!--
-				<div id="feedControl">Loading...</div>
-				
-				-->
-				
-				<!--
+         								
 				<script type="text/javascript">
 					function load() {
 					var feed ="http://rss.cnn.com/rss/edition_world.rss";
@@ -147,6 +151,6 @@
 					google.load("feeds", "1");
 					google.setOnLoadCallback(load);
 				</script>
-				-->
+			
 	</body>
 </html>

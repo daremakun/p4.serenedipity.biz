@@ -17,7 +17,6 @@ class users_controller extends base_controller {
             $this->template->content = View::instance('v_users_view_all');
             $this->template->title = "Users";
             
-            
                
             # Pass data to the view
             $this->template->content->view_users = $view_users;
@@ -190,6 +189,8 @@ class users_controller extends base_controller {
             $this->template->content = View::instance('v_users_profile');
             $this->template->title = "Profile of ".$this->user->first_name;
   
+  	// Keep track of the current page for nav 
+       	$this->template->current= 'users-profile';
                   
                   $avatar = $this->user->avatar;
                   
@@ -296,15 +297,21 @@ class users_controller extends base_controller {
                     
                     DB::instance(DB_NAME)->update("users", $data, "WHERE  user_id = ".$this->user->user_id);
                     
-                    # Create new image object and resize it
-                    $imgObj = new Image(APP_PATH.'/uploads/avatars/'. $avatar);
+                    $file_path = APP_PATH.'/uploads/avatars/'. $avatar;
+
                     
-                    $imgObj->resize(150,150, "crop");
-                    
-                    $imgObj->save_image(APP_PATH.'/uploads/avatars/'. $avatar);
+	                    # Create new image object and resize it
+	                    $imgObj = new Image($file_path);
+	                   
+	                   $imgObj->resize(150,150, "auto");
+	
+	                    $imgObj->save_image($file_path, 100);
+	                    
+                 
                     
                     # Render template
-                    Router::redirect("/users/profile"); 
+                    Router::redirect("/users/upload_avatar?uploaded=true" ); 
+                    
                     }
             } 
             

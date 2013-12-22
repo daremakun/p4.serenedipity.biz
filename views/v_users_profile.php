@@ -13,7 +13,7 @@
 
 <br /><br />
 
-<img src="<?= $user -> avatar ?>" alt="<?= $user -> first_name ?>" />
+<img src="<?= $user -> avatar . '?cachebust=' . time(); ?>" alt="<?= $user -> first_name ?>" />
 
 <br /><br />
 
@@ -21,10 +21,5 @@
 <div class="edit-profile">
         <a href='/users/upload_avatar'>Upload your photo</a>
         <a href='/users/edit_profile'>Edit your profile</a>
-</div>
-
-
-
-	
 </div>
 

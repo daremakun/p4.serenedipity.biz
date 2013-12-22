@@ -1,19 +1,19 @@
 p4.serenedipity.biz
 ===================
-This is an upgraded version of my first project. The layout is a combination of bootstrap responsive template and a layout I saw from one of my classmates that I liked.
+This is an upgraded version of my first project. this project allows users to sign up on a mini blog and share news event.The layout is a combination of bootstrap responsive template and a layout I saw from one of my classmates that I liked.
 
 The Application includes:
 
 1. Sign up
 2. Share a post
-3. Upload a picture/avatar
-4. Comment  
-5. Follow other users
-6. Edit Post
-7. Delete Post: Indicate that post has been deleted
-8. Content Title: show poster, date posted and title
-9. Error handling if pasword is less than 6 characters
-10. Can't post an empty 'post'
+3. Upload a picture/avatar 
+4. Follow other users
+5. Edit Post
+6. Delete Post: Indicate that post has been deleted
+7. Content Title: show poster, date posted and title
+8. Error handling if pasword is less than 6 characters
+9. Can't post an empty 'post'
+10. Newsfeed showing at posts section
  
 
 

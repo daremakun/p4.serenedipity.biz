@@ -54,11 +54,15 @@ class posts_controller extends base_controller {
 	
 	if( isset($_GET['delete']) ) {
 	
+	
 		 # Pass title data to the View
        		 $this->template->content->deleted = true;
 	
 	}
 	
+	// Keep track of the current page for nav 
+       	$this->template->current= 'posts-index';
+
 	 # Pass title data to the View
         $this->template->content->title = 'Site Posts';
         
@@ -98,7 +102,10 @@ class posts_controller extends base_controller {
 
         # Pass data to the View
         $this->template->content->posts = $posts;
-
+	
+	// Keep track of the current page for nav 
+       	$this->template->current= 'posts-following';
+       	
         # Render the View
         echo $this->template;
 
@@ -115,6 +122,9 @@ class posts_controller extends base_controller {
         #Pass in any error information
         $this->template->content->error = $error;
 
+	// Keep track of the current page for nav 
+       	$this->template->current= 'posts-add';
+       	
         # Render template
         echo $this->template;
 
@@ -252,6 +262,9 @@ class posts_controller extends base_controller {
         # Set up the View
         $this->template->content = View::instance("v_posts_users");
         $this->template->title = 'All Members';
+        
+        // Keep track of the current page for nav 
+       	$this->template->current= 'posts-users';
 
         # Generate query of all users
         $q = "SELECT *

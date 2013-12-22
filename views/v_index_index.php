@@ -7,7 +7,7 @@
 
 
         <div id="signup-block">
-        <h3>New to <?=APP_NAME?><?php if($user) echo ', '.$user->first_name; ?>?
+        New to <?=APP_NAME?><?php if($user) echo ', '.$user->first_name; ?>?
                 <!-- Display the signup module -->
                 <?= $signup ?>
         </div>

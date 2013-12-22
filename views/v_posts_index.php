@@ -1,6 +1,6 @@
 <?php 
 
-	if( $deleted === true ) {
+	if( isset($deleted) && $deleted === true ) {
 	
 		echo "Post successfully deleted";
 		
@@ -72,7 +72,7 @@
 					</time>
 					<hr>
 				</div>
-				<div id="my-comment"></div>
+				<div class="my-comment"></div>
 	</article>
 
 	
